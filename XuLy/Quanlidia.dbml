@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLDia" Class="QuanlidiaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-POVMTPD\SERVER;Initial Catalog=QLDia;Integrated Security=True" SettingsObjectName="XuLy.Properties.Settings" SettingsPropertyName="QLDiaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ChiTietThueTra" Member="ChiTietThueTras">
+    <Type Name="ChiTietThueTra">
+      <Column Name="MaPhieuThue" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaDia" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NgayTra" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PhiTreHan" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="DVD_CD_ChiTietThueTra" Member="DVD_CD" ThisKey="MaDia" OtherKey="MaDia" Type="DVD_CD" IsForeignKey="true" />
+      <Association Name="TTThueDia_ChiTietThueTra" Member="TTThueDia" ThisKey="MaPhieuThue" OtherKey="MaPhieuThue" Type="TTThueDia" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DVD_CD" Member="DVD_CDs">
+    <Type Name="DVD_CD">
+      <Column Name="MaDia" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MoTa" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Gia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MaTieuDe" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="DVD_CD_ChiTietThueTra" Member="ChiTietThueTras" ThisKey="MaDia" OtherKey="MaDia" Type="ChiTietThueTra" />
+      <Association Name="DVD_CD_TTDatDia" Member="TTDatDias" ThisKey="MaDia" OtherKey="MaDia" Type="TTDatDia" />
+      <Association Name="TieuDe_DVD_CD" Member="TieuDe" ThisKey="MaTieuDe" OtherKey="MaTieuDe" Type="TieuDe" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KhachHang" Member="KhachHangs">
+    <Type Name="KhachHang">
+      <Column Name="MaKH" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SoDienThoai" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(90)" CanBeNull="true" />
+      <Association Name="KhachHang_TTDatDia" Member="TTDatDias" ThisKey="MaKH" OtherKey="MaKH" Type="TTDatDia" />
+      <Association Name="KhachHang_TTThueDia" Member="TTThueDias" ThisKey="MaKH" OtherKey="MaKH" Type="TTThueDia" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoaiDia" Member="LoaiDias">
+    <Type Name="LoaiDia">
+      <Column Name="MaLoai" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenLoai" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Association Name="LoaiDia_TieuDe" Member="TieuDes" ThisKey="MaLoai" OtherKey="MaLoai" Type="TieuDe" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TieuDe" Member="TieuDes">
+    <Type Name="TieuDe">
+      <Column Name="MaTieuDe" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenTieuDe" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+      <Column Name="MaLoai" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="TieuDe_DVD_CD" Member="DVD_CDs" ThisKey="MaTieuDe" OtherKey="MaTieuDe" Type="DVD_CD" />
+      <Association Name="TieuDe_TTDatDia" Member="TTDatDias" ThisKey="MaTieuDe" OtherKey="MaTieuDe" Type="TTDatDia" />
+      <Association Name="LoaiDia_TieuDe" Member="LoaiDia" ThisKey="MaLoai" OtherKey="MaLoai" Type="LoaiDia" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TTDatDia" Member="TTDatDias">
+    <Type Name="TTDatDia">
+      <Column Name="MaDatDia" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NgayDat" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MaKH" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MaDia" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MaTieuDe" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="DVD_CD_TTDatDia" Member="DVD_CD" ThisKey="MaDia" OtherKey="MaDia" Type="DVD_CD" IsForeignKey="true" />
+      <Association Name="KhachHang_TTDatDia" Member="KhachHang" ThisKey="MaKH" OtherKey="MaKH" Type="KhachHang" IsForeignKey="true" />
+      <Association Name="TieuDe_TTDatDia" Member="TieuDe" ThisKey="MaTieuDe" OtherKey="MaTieuDe" Type="TieuDe" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TTThueDia" Member="TTThueDias">
+    <Type Name="TTThueDia">
+      <Column Name="MaPhieuThue" Type="System.String" DbType="NVarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NgayThue" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Cost" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MaKH" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="TTThueDia_ChiTietThueTra" Member="ChiTietThueTras" ThisKey="MaPhieuThue" OtherKey="MaPhieuThue" Type="ChiTietThueTra" />
+      <Association Name="KhachHang_TTThueDia" Member="KhachHang" ThisKey="MaKH" OtherKey="MaKH" Type="KhachHang" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

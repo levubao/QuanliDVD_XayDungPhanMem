@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 11.75" name="Quanlidia">
+  <DataContextMoniker Name="/QuanlidiaDataContext" />
+  <nestedChildShapes>
+    <classShape Id="fa83b737-c452-42fa-9707-69217e0a176c" absoluteBounds="6.25, 3.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/QuanlidiaDataContext/ChiTietThueTra" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1631017a-69a8-43ea-9303-bd64838f0486" absoluteBounds="6.265, 4.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a246e4fe-f5b9-4ae1-8d85-d6f189064b1b" absoluteBounds="0.75, 1.125, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/QuanlidiaDataContext/DVD_CD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c5e31a74-9147-46bb-83d1-5a2755f15feb" absoluteBounds="0.765, 1.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3d19c146-c529-4fb2-8842-3f8da881653c" absoluteBounds="0.75, 3.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/QuanlidiaDataContext/KhachHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="faf0e7a3-4c4b-4296-af83-494df63b88bb" absoluteBounds="0.765, 4.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2b7f6a40-90c2-4aed-b7fe-eb345d711a7f" absoluteBounds="1.75, 10.25, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/QuanlidiaDataContext/LoaiDia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6efd0ea4-2fdc-409f-b0ba-3aa2cee71cf8" absoluteBounds="1.7650000000000001, 10.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ddfe5df8-3e5c-4123-b7e7-685823cca336" absoluteBounds="1.5, 7.125, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/QuanlidiaDataContext/TieuDe" />
+      <nestedChildShapes>
+        <elementListCompartment Id="407d69ae-b93d-4896-a846-5f40fbe2345d" absoluteBounds="1.5150000000000001, 7.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a66c9676-aa17-4275-8390-1c75a8927ca8" absoluteBounds="3.5, 0.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/QuanlidiaDataContext/TTDatDia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="88a6eb69-74f4-4f55-908a-50f36394bbc0" absoluteBounds="3.515, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="85041037-8ae5-4a8e-b697-495e39a9d47d" absoluteBounds="3.5, 3.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/QuanlidiaDataContext/TTThueDia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8ff134b8-0fa9-4ae1-abb9-ffebb60ab17f" absoluteBounds="3.515, 4.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.73964680989583); (2.85416541666667 : 2.73964680989583 : JumpStart); (3.02083208333333 : 2.73964680989583 : JumpEnd); (3.04166916666667 : 2.73964680989583 : JumpStart); (3.20833583333333 : 2.73964680989583 : JumpEnd); (3.22916666666667 : 2.73964680989583 : JumpStart); (3.39583333333333 : 2.73964680989583 : JumpEnd); (7.25 : 2.73964680989583); (7.25 : 3.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QuanlidiaDataContext/DVD_CD/DVD_CD_ChiTietThueTra" />
+      <nodes>
+        <classShapeMoniker Id="a246e4fe-f5b9-4ae1-8d85-d6f189064b1b" />
+        <classShapeMoniker Id="fa83b737-c452-42fa-9707-69217e0a176c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.1250025 : 7.125); (3.1250025 : 1.90107090494792); (3.02083208333333 : 1.90107090494792 : JumpStart); (2.85416541666667 : 1.90107090494792 : JumpEnd); (2.75 : 1.90107090494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QuanlidiaDataContext/TieuDe/TieuDe_DVD_CD" />
+      <nodes>
+        <classShapeMoniker Id="ddfe5df8-3e5c-4123-b7e7-685823cca336" />
+        <classShapeMoniker Id="a246e4fe-f5b9-4ae1-8d85-d6f189064b1b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.625 : 10.25); (2.625 : 8.5112939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QuanlidiaDataContext/LoaiDia/LoaiDia_TieuDe" />
+      <nodes>
+        <classShapeMoniker Id="2b7f6a40-90c2-4aed-b7fe-eb345d711a7f" />
+        <classShapeMoniker Id="ddfe5df8-3e5c-4123-b7e7-685823cca336" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.45053545247396); (2.85416541666667 : 1.45053545247396 : JumpStart); (3.02083208333333 : 1.45053545247396 : JumpEnd); (3.22916666666667 : 1.45053545247396 : JumpStart); (3.39583333333333 : 1.45053545247396 : JumpEnd); (3.5 : 1.45053545247396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QuanlidiaDataContext/DVD_CD/DVD_CD_TTDatDia" />
+      <nodes>
+        <classShapeMoniker Id="a246e4fe-f5b9-4ae1-8d85-d6f189064b1b" />
+        <classShapeMoniker Id="a66c9676-aa17-4275-8390-1c75a8927ca8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.8112992741887); (2.87857318490112 : 3.68272608928758 : JumpStart); (2.99642431509888 : 3.56487495908982 : JumpEnd); (3.06607693490112 : 3.49522233928758 : JumpStart); (3.18392806509888 : 3.37737120908982 : JumpEnd); (3.3125 : 3.2487992741887); (3.3125 : 1.06901572623698); (3.5 : 1.06901572623698)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QuanlidiaDataContext/KhachHang/KhachHang_TTDatDia" />
+      <nodes>
+        <classShapeMoniker Id="3d19c146-c529-4fb2-8842-3f8da881653c" />
+        <classShapeMoniker Id="a66c9676-aa17-4275-8390-1c75a8927ca8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.93749875 : 7.125); (2.93749875 : 0.90625); (3.5 : 0.90625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QuanlidiaDataContext/TieuDe/TieuDe_TTDatDia" />
+      <nodes>
+        <classShapeMoniker Id="ddfe5df8-3e5c-4123-b7e7-685823cca336" />
+        <classShapeMoniker Id="a66c9676-aa17-4275-8390-1c75a8927ca8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.66429768880208); (6.25 : 4.66429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QuanlidiaDataContext/TTThueDia/TTThueDia_ChiTietThueTra" />
+      <nodes>
+        <classShapeMoniker Id="85041037-8ae5-4a8e-b697-495e39a9d47d" />
+        <classShapeMoniker Id="fa83b737-c452-42fa-9707-69217e0a176c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.66429768880208); (2.85416541666667 : 4.66429768880208 : JumpStart); (3.02083208333333 : 4.66429768880208 : JumpEnd); (3.04166916666667 : 4.66429768880208 : JumpStart); (3.20833583333333 : 4.66429768880208 : JumpEnd); (3.5 : 4.66429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QuanlidiaDataContext/KhachHang/KhachHang_TTThueDia" />
+      <nodes>
+        <classShapeMoniker Id="3d19c146-c529-4fb2-8842-3f8da881653c" />
+        <classShapeMoniker Id="85041037-8ae5-4a8e-b697-495e39a9d47d" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,6 @@
+C:\Users\PC\Desktop\Xay Dung Phan Mem\QuanLiDia\QuanLiDia\XuLy\bin\Debug\XuLy.dll.config
+C:\Users\PC\Desktop\Xay Dung Phan Mem\QuanLiDia\QuanLiDia\XuLy\bin\Debug\XuLy.dll
+C:\Users\PC\Desktop\Xay Dung Phan Mem\QuanLiDia\QuanLiDia\XuLy\bin\Debug\XuLy.pdb
+C:\Users\PC\Desktop\Xay Dung Phan Mem\QuanLiDia\QuanLiDia\XuLy\obj\Debug\XuLy.csprojResolveAssemblyReference.cache
+C:\Users\PC\Desktop\Xay Dung Phan Mem\QuanLiDia\QuanLiDia\XuLy\obj\Debug\XuLy.dll
+C:\Users\PC\Desktop\Xay Dung Phan Mem\QuanLiDia\QuanLiDia\XuLy\obj\Debug\XuLy.pdb
